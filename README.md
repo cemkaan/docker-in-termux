@@ -84,16 +84,6 @@ setup-alpine -f answerfile
 qemu-system-x86_64 -machine q35 -m 1024 -smp cpus=2 -cpu qemu64 -drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd -netdev user,id=n1,dns=8.8.8.8,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 -nographic alpine.img
 
 ```
-a- 
-`nano run_qemu.sh`
-In the text editor, write the following:
-```bash
-#!/bin/bash
-qemu-system-x86_64 -machine q35 -m 1024 -smp cpus=2 -cpu qemu64 -drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd -netdev user,id=n1,dns=8.8.8.8,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 -nographic alpine.img
-```
-Save and close the file. In nano, you can do this by pressing Ctrl+X, then Y to confirm saving, and then Enter to confirm the filename.
-b- chmod command: `chmod +x run_qemu.sh`.
-c- `./run_qemu.sh`
 
 15. Update system and install docker:
 ```bash
@@ -117,6 +107,25 @@ rc-update add docker
 18. Check docker install successfully or not:
 ```bash
 docker run hello-world
+```
+# fast launch
+a- 
+```bash
+nano run_qemu.sh
+```
+In the text editor, write the following:
+```bash
+#!/bin/bash
+qemu-system-x86_64 -machine q35 -m 1024 -smp cpus=2 -cpu qemu64 -drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd -netdev user,id=n1,dns=8.8.8.8,hostfwd=tcp::2222-:22 -device virtio-net,netdev=n1 -nographic alpine.img
+```
+Save and close the file. In nano, you can do this by pressing Ctrl+X, then Y to confirm saving, and then Enter to confirm the filename.
+b- chmod command: 
+```bash
+chmod +x run_qemu.sh
+```
+c- 
+```bash
+./run_qemu.sh
 ```
 
 # Some useful keys
