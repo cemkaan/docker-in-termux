@@ -43,14 +43,16 @@ qemu-system-x86_64 -machine q35 -m 1024 -smp cpus=2 -cpu qemu64 -drive if=pflash
 8. Login with username ``root`` (no password)
 
 9. Setup network (press Enter to use defaults):
+   localhost:~#
 ```bash
-localhost:~# setup-interfaces
+ setup-interfaces
+```
  Available interfaces are: eth0.
  Enter '?' for help on bridges, bonding and vlans.
  Which one do you want to initialize? (or '?' or 'done') [eth0]
  Ip address for eth0? (or 'dhcp', 'none', '?') [dhcp]
  Do you want to do any manual network configuration? [no]
-```
+ 
 localhost:~# 
 ```bash
 ifup eth0
