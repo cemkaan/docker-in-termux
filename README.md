@@ -108,7 +108,8 @@ rc-update add docker
 ```bash
 docker run hello-world
 ```
-# fast launch
+
+# Quick launch
 a- 
 ```bash
 wget https://gist.githubusercontent.com/cemkaan/858961c9420037e2d00e0668563963d5/raw/8ea489b2167f0a5878cd8d2ff177a8777657e77a/run_qemu.sh
@@ -119,11 +120,23 @@ b- chmod command:
 ```bash
 chmod +x run_qemu.sh
 ```
-c- 
+c-  first edit then run
 ```bash
 ./run_qemu.sh
 ```
+## Enable root access for SSH connections
 
+```bash
+apk add micro
+micro /etc/ssh/sshd_config
+```
+Find the line PermitRootLogin prohibit-password and change it to:
+**PermitRootLogin yes**
+Save the changes and exit the editor. CTRL+s
+Restart the SSH service:
+```bash
+service sshd restart
+```
 # Some useful keys
 - ``Ctrl+a x``: quit emulation
 - ``Ctrl+a h``: toggle QEMU console
