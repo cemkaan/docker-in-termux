@@ -111,27 +111,19 @@ docker run hello-world
 # fast launch
 a- 
 ```bash
-nano run_qemu.sh
+wget https://gist.githubusercontent.com/cemkaan/858961c9420037e2d00e0668563963d5/raw/8ea489b2167f0a5878cd8d2ff177a8777657e77a/run_qemu.sh
 ```
-In the text editor, write the following:
-```bash
-#!/bin/bash
-qemu-system-x86_64 -machine q35 -m 4096 -smp cpus=4 -cpu qemu64 -drive if=pflash,format=raw,read-only=on,file=$PREFIX/share/qemu/edk2-x86_64-code.fd -netdev user,id=n1,restrict=y -device virtio-net,netdev=n1 -nographic alpine.img
-```
-Save and close the file. In nano, you can do this by pressing Ctrl+X, then Y to confirm saving, and then Enter to confirm the filename.
+
+
 b- chmod command: 
 ```bash
 chmod +x run_qemu.sh
-apk add socat
 ```
 c- 
 ```bash
 ./run_qemu.sh
 ```
-d- 
-```bash
-socat TCP-LISTEN:2222,fork TCP:127.0.0.1:22 &
-```
+
 # Some useful keys
 - ``Ctrl+a x``: quit emulation
 - ``Ctrl+a h``: toggle QEMU console
