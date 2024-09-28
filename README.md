@@ -112,7 +112,7 @@ docker run hello-world
 # Quick launch
 a- 
 ```bash
-wget https://gist.githubusercontent.com/cemkaan/858961c9420037e2d00e0668563963d5/raw/8ea489b2167f0a5878cd8d2ff177a8777657e77a/run_qemu.sh
+wget https://gist.githubusercontent.com/cemkaan/858961c9420037e2d00e0668563963d5/raw/dd4cd3b9a09bb8d88924299abc4c4e28a917a5e7/run_qemu.sh
 ```
 
 
