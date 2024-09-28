@@ -30,9 +30,9 @@ mkdir alpine && cd alpine
 wget https://dl-cdn.alpinelinux.org/alpine/v3.19/releases/x86_64/alpine-virt-3.19.4-x86_64.iso
 ```
 
-6. Create disk (note it won't actually take 5GB of space, more like 500-600MB):
+6. Create disk (note it won't actually take 15GB of space, more like 500-600MB):
 ```bash
-qemu-img create -f qcow2 alpine.img 5G
+qemu-img create -f qcow2 alpine.img 15G
 ```
 
 7. Boot it up:
