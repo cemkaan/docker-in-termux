@@ -118,6 +118,8 @@ rc-update add docker
 ```bash
 docker run hello-world
 ```
+If it started hello-world container you can poweroff again. it's done.
+now create a quick launcher 
 
 # Quick launch
 a- 
