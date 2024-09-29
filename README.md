@@ -134,8 +134,9 @@ chmod +x run_qemu.sh
 ```
 c-  first edit then run
 ```bash
-./run_qemu.sh
+./run_qemu.shbash run_qemu.sh
 ```
+or `bash run_qemu.sh`
 ## Enable root access for SSH connections
 
 ```bash
