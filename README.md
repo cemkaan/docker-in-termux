@@ -3,8 +3,9 @@ This repository contains instructions on how to install Docker in [Termux](https
 
 # Prerequisites
 Before proceeding with the installation, make sure you have the following prerequisites:
-- An Android device with Termux installed. You can download Termux from the [F-Droid](https://f-droid.org/packages/com.termux/) app store.
+- An Android device with Termux installed. You can download Termux from the [F-Droid](https://f-droid.org/packages/com.termux/) app store or github.
 - Stable internet connection.
+- Some easy way to write commands in terminal like remote access [SSH](https://wiki.termux.com/wiki/Remote_Access#Using_the_SSH_server)
 
 # Installation Steps
 Follow the steps below to install Docker in Termux:
@@ -19,7 +20,16 @@ pkg update -y && pkg upgrade -y
 ```bash
 pkg install qemu-utils qemu-common qemu-system-x86_64-headless wget -y
 ```
-
+3.b. Run `termux-setup-storage` Check if you can access sdcard
+```ash
+~ $ df -h storage/external-1/
+Filesystem      Size Used Avail Use% Mounted on
+/dev/fuse       119G  27G   92G  23% /storage/8895-C850
+```
+go to sdcard
+```bash
+cd ~/storage/external-1/
+```
 4. Create a seperate directory:
 ```bash
 mkdir alpine && cd alpine
