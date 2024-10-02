@@ -86,7 +86,7 @@ sed -i -E 's/(local kernel_opts)=.*/\1="console=ttyS0"/' /sbin/setup-disk
 ```bash
 setup-alpine -f answerfile
 ```
-
+say yes for disk install question
 13. Once installation is complete, power off the VM (command ``poweroff``)
 
 14. Boot again without cdrom:
